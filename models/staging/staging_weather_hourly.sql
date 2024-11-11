@@ -1,4 +1,3 @@
-sql
     WITH hourly_raw AS (
         SELECT
                 airport_code,

@@ -1,4 +1,3 @@
-sql
     {{ config(materialized='view') }}
     
     WITH flights_one_month AS (
