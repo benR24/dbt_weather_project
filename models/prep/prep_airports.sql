@@ -7,7 +7,7 @@ WITH airports_reorder AS (
         	   ,tz
                ,dst
                ,city
-               ,county
+               ,country
                ,region
         FROM {{ref('staging_airports')}}
     )
