@@ -1,6 +1,6 @@
 WITH hourly_data AS (
         SELECT * 
-        FROM staging_weather_hourly
+        FROM {{ref('staging_weather_hourly')}}
     ),
     add_features AS (
         SELECT *
@@ -12,7 +12,7 @@ WITH hourly_data AS (
             , DATE_PART('day', timestamp) AS date_day
     		, date_part('month', timestamp) AS date_month
     		, date_part('year', timestamp) AS date_year
-    		, EXTRACT(week from timestamp) AS cw
+    		, date_part('week', timestamp) AS cw
         FROM hourly_data
     ),
     add_more_features AS (
