@@ -32,7 +32,7 @@ WITH mart_faa_stats AS (
    		city,
    		country,
    		name
-   from prep_airports),
+   from {{ref('prep_airports')}}),
  totals as(
  	select
  		dp.faa,
