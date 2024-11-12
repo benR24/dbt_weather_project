@@ -52,4 +52,4 @@ WITH mart_faa_stats AS (
   		t.*
   from totals t
   join mart_faa_stats_air ap
-  on t.faa = ap.faa;
+  on t.faa = ap.faa
