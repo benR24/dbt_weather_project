@@ -11,7 +11,7 @@ WITH mart_faa_stats AS (
         	count(dep_time) as occured_dep,
         	count(distinct tail_number) as unique_tails_dep,
         	count(distinct airline) as unique_airlines_dep
-        FROM prep_flights
+        FROM mart_faa_stats
         group by origin
     ),
    mart_faa_stats_arr as(
@@ -24,7 +24,7 @@ WITH mart_faa_stats AS (
         	count(dep_time) as occured_arr,
         	count(distinct tail_number) as unique_tails_arr,
         	count(distinct airline) as unique_airlines_arr
-        FROM prep_flights
+        FROM mart_faa_stats
         group by dest),
    mart_faa_stats_air as(
    select
