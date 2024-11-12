@@ -1,6 +1,6 @@
 WITH mart_faa_stats AS (
     SELECT * 
-    FROM {{ref('prep_flights pf')}} )
+    FROM {{ref('prep_flights')}} )
     mart_faa_stats_origin AS(
         select
         	origin as faa,
